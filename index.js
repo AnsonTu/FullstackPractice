@@ -3,6 +3,8 @@ const express = require("express");
 // Import mongoose to connect to a Mongo database
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
+// Import the user model. This must be required before the passport import.
+require("./models/User");
 // Import the passport configuration.
 // We're not assigning anything, so we can just require the file.
 require("./services/passport");
